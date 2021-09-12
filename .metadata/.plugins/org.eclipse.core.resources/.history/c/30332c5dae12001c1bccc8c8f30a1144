@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.example.ecommerce.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.ecommerce.model.Category;
+import com.example.ecommerce.service.CategoryService;
+import com.example.ecommerce.service.ProductService;
+
+/**
+ * Controller class for home page
+ * @author pmonthei
+ *
+ */
+@Controller
+public class HomeController {
+	@Autowired
+	private ProductService productService;
+	@Autowired
+	private CategoryService categoryService;
+	
+	@GetMapping({"/","/home"})
+	public String home(Model model) {
+		model.addAttribute("categories", categoryService.getAllCategories());
+		return "index";
+	}
+	
+	@GetMapping("/shop")
+	public String getSearchProduct(@ModelAttribute("category") Category category,@RequestParam(name="keyword") String keyword) {
+		return "redirect:/home";
+	}
+	
+}

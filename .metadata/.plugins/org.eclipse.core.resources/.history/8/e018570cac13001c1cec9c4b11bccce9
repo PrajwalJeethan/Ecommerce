@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.example.ecommerce.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.example.ecommerce.common.GlobalData;
+import com.example.ecommerce.service.ProductService;
+
+/**
+ * @author pmonthei
+ *
+ */
+
+@Controller
+public class CartController {
+	@Autowired
+	private ProductService productService;
+	
+	@GetMapping("/addToCart/{id}")
+	public String addToCart(@PathVariable Long id) {
+		GlobalData.cart.add(productService.getProductById(id).get());
+		return "redirect:/shop";
+	}
+
+}

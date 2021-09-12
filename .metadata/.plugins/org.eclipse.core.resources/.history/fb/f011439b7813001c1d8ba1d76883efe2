@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.example.ecommerce.repository;
+
+/**
+ * @author pmonthei
+ *
+ */
+public class RoleRepository {
+
+}

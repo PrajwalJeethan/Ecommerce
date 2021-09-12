@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.example.ecommerce.configuration;
+
+import org.springframework.stereotype.Component;
+
+/**
+ * @author pmonthei
+ *
+ */
+@Component
+public class GoogleOAuth2SuccessHandler {
+
+}

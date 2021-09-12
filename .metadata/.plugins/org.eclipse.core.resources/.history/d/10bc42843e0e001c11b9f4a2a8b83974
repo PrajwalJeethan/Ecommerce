@@ -1,0 +1,43 @@
+/**
+ * 
+ */
+package com.example.ecommerce.service;
+
+import java.util.Base64;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce.dao.ProductDao;
+import com.example.ecommerce.model.Category;
+import com.example.ecommerce.model.Product;
+import com.example.ecommerce.repository.ProductRepository;
+
+/**
+ * Service class for product entity
+ * @author pmonthei
+ *
+ */
+@Service
+public class ProductService {
+	@Autowired
+	private ProductRepository productRepository;
+
+	public List<Product> getAllProducts() {
+		
+		return productRepository.findAll();
+	}
+
+	public void saveProduct(ProductDao productDao, Category category,byte[] image) {
+		Product product = new Product();
+		product.setId(productDao.getId());
+		product.setName(productDao.getName());
+		product.setPrice(productDao.getPrice());
+		product.setDescription(productDao.getDescription());
+		product.setCategory(category);
+		product.setImage(Base64.getEncoder().encodeToString(image));
+		
+		productRepository.save(product);
+	}
+}

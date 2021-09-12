@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.example.ecommerce.controllers;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.ecommerce.model.User;
+import com.example.ecommerce.service.CustomerUserDetailsService;
+
+/**
+ * @author pmonthei
+ *
+ */
+@Controller
+public class LoginController {
+	
+	@Autowired
+	private CustomerUserDetailsService customerUserDetailsService;
+	
+	@GetMapping("/login")
+	public String login() {
+		return "login";
+	}
+	
+	@GetMapping("/register")
+	public String register() {
+		return "register";
+	}
+	
+	@PostMapping("/register")
+	public String register(@ModelAttribute("user") User user,HttpServletRequest request) throws ServletException{
+		customerUserDetailsService.registerUser(user);
+		return "rediect:/";
+	}
+
+}

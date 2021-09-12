@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.example.ecommerce.common;
+
+/**
+ * @author pmonthei
+ *
+ */
+public class GlobalData {
+
+}

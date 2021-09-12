@@ -1,0 +1,14 @@
+package com.example.ecommerce;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class EcommerceDataTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

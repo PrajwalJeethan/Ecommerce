@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=ecommerce/C:\/Users\/pmonthei\/.m2\/repository\/org\/springframework\/spring-webmvc\/5.3.9\/spring-webmvc-5.3.9.jar&lt;org.springframework.web.servlet(ModelAndView.class[ModelAndView" modifiers="33" timestamp="1629005204767"/>
+    <typeInfo handle="=ecommerce/C:\/Program Files\/Java\/jdk1.8.0_291\/jre\/lib\/rt.jar&lt;java.util(List.class[List" modifiers="1537" timestamp="1623835352850"/>
+    <typeInfo handle="=ecommerce/C:\/Users\/pmonthei\/.m2\/repository\/org\/springframework\/spring-core\/5.3.9\/spring-core-5.3.9.jar&lt;org.springframework.lang(NonNull.class[NonNull" modifiers="9729" timestamp="1629005358270"/>
+    <typeInfo handle="=ecommerce/C:\/Users\/pmonthei\/.m2\/repository\/jakarta\/validation\/jakarta.validation-api\/2.0.2\/jakarta.validation-api-2.0.2.jar&lt;javax.validation.constraints(Email.class[Email" modifiers="9729" timestamp="1631199097677"/>
+    <typeInfo handle="=ecommerce/C:\/Program Files\/Java\/jdk1.8.0_291\/jre\/lib\/rt.jar&lt;java.lang.annotation(ElementType.class[ElementType" modifiers="16433" timestamp="1623835352850"/>
+    <typeInfo handle="=ecommerce/C:\/Users\/pmonthei\/.m2\/repository\/org\/springframework\/security\/spring-security-config\/5.5.2\/spring-security-config-5.5.2.jar&lt;org.springframework.security.config.annotation.web.configuration(WebSecurityConfiguration.class[WebSecurityConfiguration" modifiers="33" timestamp="1631371391534"/>
+    <typeInfo handle="=ecommerce/C:\/Users\/pmonthei\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.5.4\/spring-data-jpa-2.5.4.jar&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1630081877825"/>
+    <typeInfo handle="=ecommerce/C:\/Users\/pmonthei\/.m2\/repository\/org\/springframework\/security\/spring-security-web\/5.5.2\/spring-security-web-5.5.2.jar&lt;org.springframework.security.web(DefaultRedirectStrategy.class[DefaultRedirectStrategy" modifiers="33" timestamp="1631371402935"/>
+</typeInfoHistroy>

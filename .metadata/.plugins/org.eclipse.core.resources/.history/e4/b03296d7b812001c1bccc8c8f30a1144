@@ -1,0 +1,56 @@
+/**
+ * 
+ */
+package com.example.ecommerce.service;
+
+import java.util.Base64;
+import java.util.List;
+
+import org.dozer.Mapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ecommerce.dao.ProductDao;
+import com.example.ecommerce.model.Category;
+import com.example.ecommerce.model.Product;
+import com.example.ecommerce.repository.ProductRepository;
+
+/**
+ * Service class for product entity
+ * @author pmonthei
+ *
+ */
+@Service
+public class ProductService {
+	@Autowired
+	private ProductRepository productRepository;
+	@Autowired
+	private Mapper mapper;
+	public List<Product> getAllProducts() {
+		
+		return productRepository.findAll();
+	}
+
+	public void saveProduct(ProductDao productDao, Category category,byte[] image) {
+//		Product product = new Product();
+//		product.setProductId(productDao.getId());
+//		product.setName(productDao.getName());
+//		product.setPrice(productDao.getPrice());
+//		product.setDescription(productDao.getDescription());
+		Product product = mapper.map(productDao, Product.class);
+		product.setCategory(category);
+		product.setImage(Base64.getEncoder().encodeToString(image));
+		category.getProducts().add(product);
+		productRepository.save(product);
+	}
+
+	public void removeProduct(Long id) {
+		
+		productRepository.deleteById(id);
+	}
+
+	public List<ProductDao> searchForProductsByCategoryId(Long categoryId, String keyword) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

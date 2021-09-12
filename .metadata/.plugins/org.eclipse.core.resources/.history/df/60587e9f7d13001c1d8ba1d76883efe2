@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.example.ecommerce.service;
+
+/**
+ * @author pmonthei
+ *
+ */
+public class CustomerUserDetailsService {
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ecommerce/src/main/resources/static/images/pngwing.com.png&apos; to &apos;logo.png&apos;" description="Rename resource &apos;pngwing.com.png&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/static/images/pngwing.com.png" name="logo.png" stamp="1631434061295" updateReferences="true"/>
+</session>
